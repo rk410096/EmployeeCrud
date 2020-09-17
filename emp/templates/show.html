@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <table border="0" bgcolor="lightblue" cellspacing="2" cellpadding="2" align="center">
+    <thead>
+      <tr>
+        <th>Employee No.</th>
+        <th>Employee Name</th>
+        <th>Employee salary</th>
+        <th>Address</th>
+        <th>Do Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for e in ed %}
+      <tr>
+        <td>{{e.empno}}</td>
+        <td>{{e.ename}}</td>
+        <td>{{e.salary}}</td>
+        <td>{{e.add}}</td>
+        <td>
+          <a href="/edit/{{e.id}}">Edit</a>
+          <a href="/delete/{{e.id}}">Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

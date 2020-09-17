@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="/update/{{em.id}}" method="post">
+      {% csrf_token %}
+      <table border="0" bgcolor="lightblue" cellspacing="2" cellpadding="2" align="center">
+        <tr>
+          <td>Employee No.</td>
+          <td><input type="text" name="empno" value="{{em.empno}}"></td>
+        </tr>
+        <tr>
+          <td>Employee Name</td>
+          <td><input type="text" name="ename" value="{{em.ename}}"></td>
+        </tr>
+        <tr>
+          <td>Employee salary</td>
+          <td><input type="text" name="salary" value="{{em.salary}}"></td>
+        </tr>
+        <tr>
+          <td>Address.</td>
+          <td><input type="text" name="add" value="{{em.add}}"></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center"><button type="submit" name="button">Update</button></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
